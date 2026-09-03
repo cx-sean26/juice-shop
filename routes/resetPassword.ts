@@ -67,7 +67,7 @@ function verifySecurityAnswerChallenges (user: UserModel, answer: string) {
         if (memories[i].geoStalkingMetaSecurityAnswer) {
           return memories[i].geoStalkingMetaSecurityAnswer
         }
-      }
+      // } test
     })())
     return user.id === users.john.id && answer === securityAnswer
   })

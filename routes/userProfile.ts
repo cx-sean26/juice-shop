@@ -89,7 +89,7 @@ export function getUserProfile () {
 
       challengeUtils.solveIf(challenges.usernameXssChallenge, () => {
         return username && user?.profileImage.match(/;[ ]*script-src(.)*'unsafe-inline'/g) !== null && utils.contains(username, '<script>alert(`xss`)</script>')
-      })
+      }) 
 
       res.set({
         'Content-Security-Policy': CSP

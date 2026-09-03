@@ -65,7 +65,8 @@ export const getVerdict = (vulnLines: number[], neutralLines: number[], selected
   const okLines = [...vulnLines, ...neutralLines]
   const notOkLines = selectedLines.filter(x => !okLines.includes(x))
   return notOkLines.length === 0
-}
+} 
+// test
 
 export const checkVulnLines = () => async (req: Request<Record<string, unknown>, Record<string, unknown>, VerdictRequestBody>, res: Response, next: NextFunction) => {
   const key = req.body.key

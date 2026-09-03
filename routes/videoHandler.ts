@@ -15,7 +15,7 @@ import { challenges } from '../data/datacache'
 import * as utils from '../lib/utils'
 
 const entities = new Entities()
-
+// test
 export const getVideo = () => {
   return (req: Request, res: Response) => {
     const path = videoPath()
@@ -69,9 +69,10 @@ export const promotionVideo = () => {
       const fn = pug.compile(template)
       let compiledTemplate = fn()
       compiledTemplate = compiledTemplate.replace('<script id="subtitle"></script>', '<script id="subtitle" type="text/vtt" data-label="English" data-lang="en">' + subs + '</script>')
-      res.send(compiledTemplate)
+      res.send(compiledTemplate) 
     })
   }
+  
   function favicon () {
     return utils.extractFilename(config.get('application.favicon'))
   }

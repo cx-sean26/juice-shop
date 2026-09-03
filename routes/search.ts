@@ -13,8 +13,8 @@ import * as challengeUtils from '../lib/challengeUtils'
 
 class ErrorWithParent extends Error {
   parent: Error | undefined
-}
-
+} 
+//test you are correct
 // vuln-code-snippet start unionSqlInjectionChallenge dbSchemaChallenge
 export function searchProducts () {
   return (req: Request, res: Response, next: NextFunction) => {

@@ -74,4 +74,4 @@ export function delPaymentMethodById () {
       res.status(400).json({ status: 'error', data: 'Malicious activity detected.' })
     }
   }
-}
+} 
